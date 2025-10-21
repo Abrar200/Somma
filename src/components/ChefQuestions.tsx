@@ -14,27 +14,27 @@ const ChefQuestions: React.FC<ChefQuestionsProps> = ({ formData, updateFormData 
       
       <div>
         <label className="block text-somma-ink mb-2 font-sans">What type of cuisine are you most experienced with?</label>
-        <Input value={formData.cuisineType || ''} onChange={(e) => updateFormData({ cuisineType: e.target.value })} />
+        <Input value={formData.cuisine_type || ''} onChange={(e) => updateFormData({ cuisine_type: e.target.value })} />
       </div>
 
       <div>
         <label className="block text-somma-ink mb-2 font-sans">Do you have formal culinary training or certificates?</label>
-        <Textarea value={formData.culinaryTraining || ''} onChange={(e) => updateFormData({ culinaryTraining: e.target.value })} rows={3} />
+        <Textarea value={formData.culinary_training || ''} onChange={(e) => updateFormData({ culinary_training: e.target.value })} rows={3} />
       </div>
 
       <div>
         <label className="block text-somma-ink mb-2 font-sans">How do you manage time during busy service hours?</label>
-        <Textarea value={formData.timeManagement || ''} onChange={(e) => updateFormData({ timeManagement: e.target.value })} rows={4} />
+        <Textarea value={formData.time_management || ''} onChange={(e) => updateFormData({ time_management: e.target.value })} rows={4} />
       </div>
 
       <div>
         <label className="block text-somma-ink mb-2 font-sans">What's your approach to food safety and kitchen hygiene?</label>
-        <Textarea value={formData.foodSafety || ''} onChange={(e) => updateFormData({ foodSafety: e.target.value })} rows={4} />
+        <Textarea value={formData.food_safety || ''} onChange={(e) => updateFormData({ food_safety: e.target.value })} rows={4} />
       </div>
 
       <div>
         <label className="block text-somma-ink mb-2 font-sans">How do you handle constructive criticism from the head chef or management?</label>
-        <Textarea value={formData.handleCriticism || ''} onChange={(e) => updateFormData({ handleCriticism: e.target.value })} rows={4} />
+        <Textarea value={formData.handle_criticism || ''} onChange={(e) => updateFormData({ handle_criticism: e.target.value })} rows={4} />
       </div>
 
       <div>
@@ -48,7 +48,7 @@ const ChefQuestions: React.FC<ChefQuestionsProps> = ({ formData, updateFormData 
 
       <div>
         <label className="block text-somma-ink mb-2 font-sans">Have you worked with portion control and stock rotation before?</label>
-        <Textarea value={formData.portionControl || ''} onChange={(e) => updateFormData({ portionControl: e.target.value })} rows={3} />
+        <Textarea value={formData.portion_control || ''} onChange={(e) => updateFormData({ portion_control: e.target.value })} rows={3} />
       </div>
 
       <div>
@@ -58,12 +58,12 @@ const ChefQuestions: React.FC<ChefQuestionsProps> = ({ formData, updateFormData 
 
       <div>
         <label className="block text-somma-ink mb-2 font-sans">What is your experience with dietary requirements (gluten-free, vegan, etc.)?</label>
-        <Textarea value={formData.dietaryRequirements || ''} onChange={(e) => updateFormData({ dietaryRequirements: e.target.value })} rows={4} />
+        <Textarea value={formData.dietary_requirements || ''} onChange={(e) => updateFormData({ dietary_requirements: e.target.value })} rows={4} />
       </div>
 
       <div>
         <label className="block text-somma-ink mb-2 font-sans">Do you prefer working independently or as part of a team?</label>
-        <Textarea value={formData.workPreference || ''} onChange={(e) => updateFormData({ workPreference: e.target.value })} rows={3} />
+        <Textarea value={formData.work_preference || ''} onChange={(e) => updateFormData({ work_preference: e.target.value })} rows={3} />
       </div>
     </div>
   );
