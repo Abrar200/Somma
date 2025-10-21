@@ -39,7 +39,7 @@ const ChefQuestions: React.FC<ChefQuestionsProps> = ({ formData, updateFormData 
 
       <div>
         <label className="block text-somma-ink mb-2 font-sans">Are you comfortable with prep work, cooking, and plating?</label>
-        <select className="w-full p-2 border rounded" value={formData.prepCookPlate || ''} onChange={(e) => updateFormData({ prepCookPlate: e.target.value })}>
+        <select className="w-full p-2 border rounded" value={formData.prep_cook_plate || ''} onChange={(e) => updateFormData({ prep_cook_plate: e.target.value })}>
           <option value="">Select...</option>
           <option value="yes">Yes</option>
           <option value="no">No</option>
