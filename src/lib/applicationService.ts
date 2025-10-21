@@ -1,7 +1,7 @@
 import { supabase, Application } from './supabase';
 
-// Get email API URL from environment or use default
-const EMAIL_API_URL = (import.meta as any).env?.VITE_EMAIL_API_URL || 'http://localhost:3001';
+// Use relative path for Vercel serverless function
+const EMAIL_API_URL = '/api/send-application';
 
 export interface SubmissionResult {
   success: boolean;
