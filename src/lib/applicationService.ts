@@ -1,8 +1,5 @@
 import { supabase, Application } from './supabase';
 
-// Use relative path for Vercel serverless function
-const EMAIL_API_URL = '/api/send-application';
-
 export interface SubmissionResult {
   success: boolean;
   message: string;
@@ -29,7 +26,7 @@ export async function submitApplication(formData: Application): Promise<Submissi
 
     // Step 2: Send email notification
     try {
-      const emailResponse = await fetch(`${EMAIL_API_URL}/api/send-application`, {
+      const emailResponse = await fetch('/api/send-application', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
