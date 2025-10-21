@@ -23,7 +23,7 @@ function formatApplicationEmail(data) {
         body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; }
         .container { max-width: 800px; margin: 0 auto; padding: 20px; }
         .header { background: linear-gradient(135deg, #8B7355 0%, #D4AF37 100%); color: white; padding: 30px; text-align: center; border-radius: 10px 10px 0 0; }
-        .header h1 { color: #f5f1ed; }
+        .header h1 { color: black; }
         .section { background: #f9f9f9; padding: 20px; margin: 20px 0; border-radius: 5px; border-left: 4px solid #D4AF37; }
         .section h2 { color: #8B7355; margin-top: 0; border-bottom: 2px solid #D4AF37; padding-bottom: 10px; }
         .field { margin: 15px 0; padding: 10px; background: white; border-radius: 3px; }
@@ -35,7 +35,7 @@ function formatApplicationEmail(data) {
     <body>
       <div class="container">
         <div class="header">
-          <h1>🍽️ New Application for Somma</h1>
+          <h1>New Application for Somma</h1>
           <p>Position: ${position}</p>
         </div>
   `;

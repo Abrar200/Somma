@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
         </div>
         <div className="border-t border-somma-taupe/20 pt-6 text-center">
           <p className="font-sans text-sm text-somma-taupe tracking-wide">
-            © 2025 SOMMA. Crafted by SOMMA. Powered by <a href="https://nexadigital.com.au/">Nexa Digital</a>
+            © 2025 SOMMA. Powered by <a href="https://nexadigital.com.au/">Nexa Digital</a>
           </p>
         </div>
       </div>
