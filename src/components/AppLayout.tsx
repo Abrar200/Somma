@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import RoleCard from './RoleCard';
 import JobApplicationForm from './JobApplicationForm';
-
 import ConfirmationPage from './ConfirmationPage';
 import Footer from './Footer';
 
@@ -17,12 +16,10 @@ const AppLayout: React.FC = () => {
     },
     { 
       title: 'Back of House', 
-      description: 'Craft culinary masterpieces in our award-winning kitchen',
+      description: 'Craft masterpieces and join our kitchen team',
       image: 'https://d64gsuwffb70l.cloudfront.net/68f792557b4a8ae2240f8f1b_1761056222283_dae8fc80.webp'
     }
   ];
-
-
 
   const handleRoleSelect = (role: string) => {
     setSelectedRole(role);
@@ -42,36 +39,39 @@ const AppLayout: React.FC = () => {
     return <JobApplicationForm onComplete={handleFormComplete} onCancel={handleReset} />;
   }
 
-
-
   if (view === 'confirmation') {
     return <ConfirmationPage onBackToHome={handleReset} />;
   }
 
-
-
   return (
     <div className="min-h-screen bg-somma-cream">
-      {/* Hero Section - Banner Only */}
+      {/* Hero Section - Responsive Banner */}
       <section className="relative h-screen flex items-end justify-center pb-32">
+        {/* Mobile Background - Shows only on mobile */}
         <div 
-          className="absolute inset-0 bg-cover bg-center"
+          className="absolute inset-0 bg-cover bg-center md:hidden"
+          style={{ backgroundImage: 'url(/Somma.JPG)' }}
+        />
+        
+        {/* Desktop Background - Shows only on desktop */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center hidden md:block"
           style={{ backgroundImage: 'url(https://d64gsuwffb70l.cloudfront.net/685afce20bfda24fc0f1d36c_1761055309631_9c885a90.png)' }}
         />
+        
+        {/* Overlay */}
         <div className="absolute inset-0 bg-somma-cream/78" />
+        
+        {/* Content */}
         <div className="relative z-10 text-center px-6">
           <button 
             onClick={() => document.getElementById('roles')?.scrollIntoView({ behavior: 'smooth' })}
-
             className="bg-gradient-to-r from-somma-taupe to-somma-gold text-white px-10 py-4 rounded-full font-sans font-medium text-lg hover:shadow-xl transition-all tracking-wide"
           >
             Explore Opportunities
           </button>
         </div>
       </section>
-
-
-
 
       {/* Roles Section */}
       <section id="roles" className="py-20 px-6">
@@ -83,7 +83,6 @@ const AppLayout: React.FC = () => {
             Select a role to begin your application
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-
             {roles.map((role) => (
               <RoleCard
                 key={role.title}
@@ -93,9 +92,7 @@ const AppLayout: React.FC = () => {
                 onClick={() => handleRoleSelect(role.title)}
               />
             ))}
-
           </div>
-
         </div>
       </section>
 
