@@ -182,7 +182,7 @@ export default async function handler(req, res) {
 
     const mailOptions = {
       from: EMAIL_CONFIG.auth.user,
-      to: 'info@somma.au, abrarshahriar360@yahoo.com', // Change to your actual Somma email
+      to: 'info@ammos.au, abrarshahriar360@yahoo.com', // Change to your actual Somma email
       subject: `New ${applicationData.position || 'Job'} Application - ${applicationData.full_name || applicationData.first_name + ' ' + applicationData.last_name}`,
       html: formatApplicationEmail(applicationData)
     };
