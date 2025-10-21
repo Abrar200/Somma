@@ -7,7 +7,7 @@ const Footer: React.FC = () => {
         <div className="flex justify-center mb-8">
           <div className="text-center">
             <img 
-              src="/1.jpg" 
+              src="/transparent.png" 
               alt="SOMMA" 
               className="h-12 w-auto mb-6 mx-auto"
             />
